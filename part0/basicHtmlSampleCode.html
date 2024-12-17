@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link href="firstCSSsheet.css" rel="stylesheet" />
+  <!--https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <title>My test page</title>
+
+  <!--below to style up the form-->
+  <style>
+    body {
+      /* Center the form on the page */
+      text-align: center;
+    }
+
+    form {
+      display: inline-block;
+      /* Form outline */
+      padding: 1em;
+      border: 1px solid #ccc;
+      border-radius: 1em;
+    }
+
+    p+p {
+      margin-top: 1em;
+    }
+
+    label {
+      /* Uniform size & alignment */
+      display: inline-block;
+      min-width: 90px;
+      text-align: right;
+    }
+
+    input,
+    textarea {
+      /* To make sure that all text fields have the same font settings
+     By default, text areas have a monospace font */
+      font: 1em sans-serif;
+      /* Uniform text field size */
+      width: 400px;
+      box-sizing: border-box;
+      /* Match form field borders */
+      border: 1px solid #999;
+    }
+
+    input:focus,
+    textarea:focus {
+      /* Set the outline width and style */
+      outline-style: solid;
+      /* To give a little highlight on active elements */
+      outline-color: #000;
+    }
+
+    textarea {
+      /* Align multiline text fields with their labels */
+      vertical-align: top;
+      /* Provide space to type some text */
+      height: 5em;
+    }
+
+    .button {
+      /* Align buttons with the text fields */
+      padding-left: 90px;
+      /* same size as the label elements */
+    }
+
+    button {
+      /* This extra margin represent roughly the same space as the space
+     between the labels and their text fields */
+      margin-left: 0.5em;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Mozilla is cool</h1>
+  <img src="images/firefox-icon.png" alt="The Firefox logo: a flaming fox surrounding the Earth.">
+
+  <p>At Mozilla, we’re a global community of</p>
+
+  <ul> <!-- changed to list in the tutorial -->
+    <li>technologists</li>
+    <li>thinkers</li>
+    <li>builders</li>
+  </ul>
+
+  <ol> <!-- just my test of unordered list-->
+    <li>first one</li>
+    <li>second one</li>
+    <li>Last one.</li>
+  </ol>
+
+  <p id="special-select">This is a graf with special selector as an ID.</p>
+
+  <p class="theresclass">A Graf with a class defined.</p>
+
+  <p>working together to keep the Internet alive and accessible, so people worldwide can be informed contributors and
+    creators of the Web.
+    We believe this act of human collaboration across an open platform is essential to individual growth and our
+    collective future.</p>
+
+  <p>Read the <a href="https://www.mozilla.org/en-US/about/manifesto/">Mozilla Manifesto</a>
+    to learn even more about the values and principles that guide the pursuit of our mission.</p>
+
+  <form action="/submitted-form-content" method="post">
+    <p>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="user_name" />
+    </p>
+
+    <p>
+      <label for="mail">Email:</label>
+      <input type="email" id="mail" name="user_email" />
+    </p>
+
+    <p>
+      <label for="msg">Message:</label>
+      <textarea id="msg" name="user_message">Default text to override</textarea>
+    </p>
+
+    <p class="button">
+      <button type="submit">Send your message</button>
+      <button type="reset">Reset</button>
+    </p>
+
+  </form>
+
+
+
+  <form method="post" action="python-example.py">
+    <div>
+      <label for="say">What greeting do you want to say?</label>
+      <input name="say" id="say" value="Hi">
+    </div>
+    <div>
+      <label for="to">Who do you want to say it to?</label>
+      <input name="to" value="Mom">
+    </div>
+    <div>
+      <button>Send my greetings</button>
+    </div>
+  </form>
+
+
+</body>
+
+</html>
